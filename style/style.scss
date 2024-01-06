@@ -57,7 +57,6 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--bg-color);
   z-index: 90;
 
   &__logo-wrapper {
@@ -156,6 +155,7 @@ body {
     padding: 20px;
     transform: translateY(-120%);
     background-color: var(--bg-color);
+    overflow-y: auto;
     transition: all .7s ease-in-out;
 
     &.active {
@@ -192,10 +192,20 @@ body {
 
 // HEADER -- ends
 
+.middle-block {
+  display: inline-block;
+  width: 55%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: #000;
+}
 
 // HERO
 .hero {
   height: 100vh;
+  padding-top: 92px;
 
   &__container {
     height: 100%;
@@ -204,6 +214,7 @@ body {
   &__wrapper {
     position: relative;
     height: 100%;
+    gap: 40px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -211,13 +222,71 @@ body {
     text-align: center;
   }
 
+  &__element {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    right: 0;
+    right: 100px;
+    background: url("../images/hero-element.png") no-repeat center/contain;
+    filter: blur(5px);
+    z-index: -1;
+    animation: rotate 20s linear infinite, moveUpDown 5s ease-in-out infinite, scale 5s ease-in-out infinite;
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes moveUpDown {
+
+      0%,
+      100% {
+        top: 20%;
+      }
+
+      50% {
+        top: 10%;
+      }
+    }
+
+    &--second {
+      width: 200px;
+      height: 200px;
+      top: 500px;
+      left: 0;
+      animation: rotateSecond 20s linear infinite;
+
+      @keyframes rotateSecond {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(-360deg);
+        }
+      }
+    }
+  }
+
   &__text-wrapper {
     width: 100%;
-    max-width: 675px;
   }
 
   &__title {
-    font-size: 160px;
+    text-align: center;
+    // font-size: clamp(10px, 1vw, 150px);
+    font-size: calc(60px + 160 * (100vw / 1900));
     font-weight: 700;
     line-height: 1em;
     text-transform: uppercase;
@@ -231,8 +300,7 @@ body {
     width: 100%;
     max-width: 545px;
     margin: 0 auto;
-    color: #FFF;
-    font-size: 24px;
+    font-size: calc(16px + 8 * (100vw / 1900));
     font-weight: 400;
     line-height: 1.3em;
     margin-bottom: 50px;
@@ -245,14 +313,24 @@ body {
   &__btn {
     width: 100%;
     max-width: 414px;
+    margin: 0 auto;
+
+    &--application {
+      display: none;
+      margin-top: 20px;
+      border: none;
+      color: var(--white-color);
+      background-color: var(--pink-color);
+    }
   }
 
   &__social {
-    position: absolute;
+    // position: absolute;
     gap: 30px;
     display: flex;
     bottom: 40px;
     z-index: 90;
+    padding-bottom: 40px;
   }
 
   &__social-links {
@@ -268,8 +346,13 @@ body {
 
 // HERO -- ends
 
+// ABOUT
 
+.about {
+  padding: 100px 0;
+}
 
+// ABOUT -- ends
 
 @media (max-width: 1500px) {
   .def-btn {
@@ -281,16 +364,6 @@ body {
 
     &__links {
       font-size: 16px;
-    }
-  }
-
-  .hero {
-    &__title {
-      font-size: 130px;
-    }
-
-    &__text {
-      font-size: 20px;
     }
   }
 }
@@ -319,6 +392,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  .middle-block {
+    opacity: .3;
+  }
 
   .header {
     padding: 10px 0;
@@ -339,4 +415,34 @@ body {
       display: block;
     }
   }
+
+  .hero {
+    padding-top: 50px;
+
+    &__title {
+      font-size: calc(60px + (160 + 160 * 0.7) * ((100vw - 320px) / 1300));
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      font-size: calc(16px + (8 + 8 * 0.7) * ((10vw - 320px) / 1300));
+    }
+
+    &__btn {
+      display: block;
+    }
+
+    &__element {
+      width: 150px;
+      height: 150px;
+      right: 50px;
+
+      &--second {
+        top: 500px;
+        left: 0;
+      }
+    }
+  }
 }
+
+@media (max-width:500px) {}
