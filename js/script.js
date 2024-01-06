@@ -7,3 +7,22 @@ menuBtn.addEventListener('click', () => {
   menuWrapper.classList.toggle('active')
   body.classList.toggle('lock')
 })
+
+
+const header = document.querySelector("header")
+
+window.addEventListener('scroll', function() {
+  if (pageYOffset > 1) {
+    header.classList.add('active')
+  } else {
+    header.classList.remove('active')
+  }
+})
+
+// window.addEventListener('scroll', function() {
+//   if (pageYOffset > 50) {
+//     header.classList.add('active')
+//   } else {
+//     header.classList.remove('active')
+//   }
+// })

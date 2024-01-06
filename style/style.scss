@@ -58,6 +58,13 @@ body {
   left: 0;
   right: 0;
   z-index: 90;
+  transition: all .3s;
+
+  &.active {
+    padding: 10px 0;
+    background-color: var(--bg-color);
+    box-shadow: 0 10px 10px #000;
+  }
 
   &__logo-wrapper {
     width: 100%;
@@ -465,6 +472,13 @@ body {
 }
 
 // ABOUT -- ends
+
+// ADVANTAGES
+.advantages {
+  padding: 100px 0;
+}
+
+// ADVANTAGES -- ends
 
 @media (max-width: 1500px) {
   .def-btn {
