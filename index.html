@@ -9,8 +9,9 @@
   <link rel="stylesheet" href="./style/style.css">
 </head>
 
+
 <body>
-  <span class="middle-block"></span>
+  <!-- <span class="middle-block"></span> -->
   <header class="header" id="header">
     <div class="header__container container">
       <nav class="header__nav">
@@ -74,6 +75,7 @@
   </header>
 
   <main class="main" id="main">
+    <span class="middle-block"></span>
 
     <section class="hero">
       <div class="hero__container container">
@@ -103,11 +105,10 @@
           </div>
         </div>
       </div>
-      <span class="middle-block"></span>
     </section>
+    <span class="middle-block"></span>
 
     <section class="about">
-      <span class="about__element"></span>
       <div class="about__container container">
         <div class="about__wrapper">
           <div class="about__title-wrapper">
@@ -144,15 +145,46 @@
         </div>
       </div>
     </section>
-
+    <span class="middle-block"></span>
 
     <section class="advantages">
-      <div class="advantages__container container advantages__wrapper">
-        <h2 class="advantages__title">
-          Преимущества
-          <span>сотрудничества</span>
-        </h2>
-
+      <div class="advantages__container container">
+        <div class="advantages__wrapper">
+          <h2 class="advantages__title">
+            Преимущества
+            <br>
+            <span>сотрудничества</span>
+          </h2>
+          <div class="tabs">
+            <div class="tabs__nav">
+              <button class="tabs__nav-btn active" data-tab="#tab_1">Для Работодателя</button>
+              <button class="tabs__nav-btn" data-tab="#tab_2">Для Соискателей</button>
+            </div>
+            <div class="tabs__content">
+              <div class="tabs__item active" id="tab_1">
+                <p>
+                  Мы обладаем широкой внутренней базой талантливых профессионалов, которая формировалась не один год.
+                  Сотрудничая с нами,
+                  вы получаете возможность быстро и эффективно находить лучших специалистов, соответствующих вашим
+                  требованиям и
+                  критериям.
+                </p>
+              </div>
+              <div class="tabs__item" id="tab_2">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quaerat sapiente veritatis ratione?
+                  Deserunt magni invx possimus minima vel nihil at ducimus repudiandae adipisci quas?
+                </p>
+              </div>
+            </div>
+          </div>
+          <span class="advantages__element">
+            <img src="./images/element.png" alt="">
+          </span>
+          <span class="advantages__element-second">
+            <img src="./images/element-circle.png" alt="">
+          </span>
+        </div>
       </div>
     </section>
 
