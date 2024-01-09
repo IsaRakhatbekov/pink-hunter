@@ -484,10 +484,13 @@ body {
   border-bottom: 1px solid var(--pink-color);
 }
 .advantages .tabs__content {
-  padding: 30px;
+  padding: 20px;
+  height: 300px;
+  overflow: auto;
 }
 .advantages .tabs__item {
   display: none;
+  height: 100%;
 }
 .advantages .tabs__item.active {
   display: block;
@@ -533,6 +536,88 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.advantages .swiper {
+  width: 100%;
+  height: 100%;
+}
+.advantages .swiper-slide {
+  font-size: 18px;
+}
+.advantages .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.advantages .swiper-button-prev::after,
+.advantages .swiper-button-next::after {
+  position: absolute;
+  color: #828282;
+  font-size: 20px;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+.advantages .swiper .swiper-button-prev {
+  z-index: 10;
+  top: 95%;
+  left: 0;
+  width: 50px;
+  height: 50px;
+}
+.advantages .swiper .swiper-button-next {
+  z-index: 10;
+  top: 95%;
+  left: 70px;
+  width: 50px;
+  height: 50px;
+}
+.advantages .swiper-pagination-current {
+  color: var(--pink-color);
+}
+.advantages .swiper .swiper-pagination {
+  text-align: right;
+  z-index: 0;
+}
+.advantages .swiper__number {
+  color: var(--pink-color);
+  font-size: 48px;
+  line-height: 1.3em;
+  margin-bottom: 30px;
+}
+.advantages .swiper__title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.contacts {
+  padding: 100px 0;
+}
+.contacts__title-wrapper {
+  width: 100%;
+  max-width: 728px;
+  margin: 0 auto;
+  text-align: center;
+}
+.contacts__title {
+  font-size: calc(30px + 2.2105263158vw);
+  font-weight: 400;
+  line-height: 1em;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+.contacts__title span {
+  font-weight: 700;
+}
+.contacts__subtitle {
+  font-size: calc(18px + 0.3015075377vw);
+  margin-bottom: 50px;
+}
 
 @media (max-width: 1500px) {
   .def-btn {
@@ -556,6 +641,15 @@ body {
   }
   .header__links {
     font-size: 14px;
+  }
+  .advantages__element {
+    left: 45px;
+  }
+  .advantages__element-second {
+    width: 500px;
+    height: 500px;
+    top: 400px;
+    right: 20px;
   }
 }
 @media (max-width: 768px) {
@@ -650,17 +744,24 @@ body {
     height: 400px;
     top: 400px;
   }
+  .swiper__text {
+    font-size: 16px;
+  }
 }
 @media (max-width: 500px) {
   .about__list {
     max-width: 100%;
   }
   .advantages__element {
-    left: 0;
+    left: 45px;
   }
   .advantages__element-second {
     width: 300px;
     height: 300px;
     top: 600px;
+    right: 20px;
+  }
+  .advantages .tabs__content {
+    height: 360px;
   }
 }

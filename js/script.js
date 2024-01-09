@@ -1,3 +1,15 @@
+const swiper = new Swiper(".mySwiper", {
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+    direction: 'horizontal',
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
 const menuBtn = document.querySelector(".header__mobile-btn")
 const menuWrapper = document.querySelector(".header-mobile")
 const body = document.querySelector("body")
@@ -43,3 +55,27 @@ function onTabClick(item) {
     }
   })
 }
+
+
+// function Animal(name, vid) {
+//   this.name = name;
+//   this.vid = vid;
+//   this.hello = function(name) {
+//     console.log(`Hello, I,m ${this.name}`)
+//   }
+// }
+
+// const greating = (animal) => {
+//    console.log(`Hello, I,m ${animal.name}`)
+// }
+
+// let cat0 = new Animal('Murka', 'Cat');
+
+// const cat1 = {
+//   name: 'Murka',
+//   vid: 'Cat'
+// }
+
+// cat0.hello()
+
+// greating(cat1)
