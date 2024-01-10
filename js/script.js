@@ -83,6 +83,27 @@ function onTabClick(item) {
 
 
 
+const contactsName = document.querySelector("#name")
+const contactsPost = document.querySelector("#post")
+const getInTouch = document.querySelector("#get-in-touch")
+const contactsResume = document.querySelector("#resume")
+const contactsBtn = document.querySelector(".contacts-employer__btn")
+const error = document.createElement('span')
+error.className = 'form__error'
+error.classText = 'обязательно должны быть заполнены'
+
+if (contactsBtn) {
+  contactsBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    if (contactsName.value && contactsName.value.trim()) { 
+      
+    } else {
+      contactsName.appendChild(error)
+    }
+
+  })
+}
 
 
 
