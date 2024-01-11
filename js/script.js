@@ -84,22 +84,54 @@ function onTabClick(item) {
 
 
 const contactsName = document.querySelector("#name")
+const contactsNameSpan = document.querySelector("#nameSpan")
+
 const contactsPost = document.querySelector("#post")
+const contactsPostSpan = document.querySelector("#postSpan")
+
 const getInTouch = document.querySelector("#get-in-touch")
+const getInTouchSpan = document.querySelector("#get-in-touchSpan")
+
 const contactsResume = document.querySelector("#resume")
+const contactsResumeSpan = document.querySelector("#resumeSpan")
+
 const contactsBtn = document.querySelector(".contacts-employer__btn")
-const error = document.createElement('span')
-error.className = 'form__error'
-error.classText = 'обязательно должны быть заполнены'
 
 if (contactsBtn) {
   contactsBtn.addEventListener('click', (e) => {
     e.preventDefault()
 
     if (contactsName.value && contactsName.value.trim()) { 
-      
+      // contactsName.classList.remove("error")
+      contactsNameSpan.classList.remove("error")
     } else {
-      contactsName.appendChild(error)
+      // contactsName.classList.add("error")
+      contactsNameSpan.classList.add("error")
+    }
+    
+
+    if (contactsPost.value && contactsName.value.trim()) { 
+      // contactsName.classList.remove("error")
+      contactsPostSpan.classList.remove("error")
+    } else {
+      // contactsName.classList.add("error")
+      contactsPostSpan.classList.add("error")
+    }
+
+    if (getInTouch.value && contactsName.value.trim()) { 
+      // contactsName.classList.remove("error")
+      getInTouchSpan.classList.remove("error")
+    } else {
+      // contactsName.classList.add("error")
+      getInTouchSpan.classList.add("error")
+    }
+
+    if (contactsResume.value && contactsName.value.trim()) { 
+      // contactsName.classList.remove("error")
+      contactsResumeSpan.classList.remove("error")
+    } else {
+      // contactsName.classList.add("error")
+      contactsResumeSpan.classList.add("error")
     }
 
   })

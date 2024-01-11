@@ -76,7 +76,6 @@
   </header>
 
   <main class="main" id="main">
-    <span class="middle-block"></span>
 
     <section class="hero">
       <div class="hero__container container">
@@ -107,7 +106,6 @@
         </div>
       </div>
     </section>
-    <span class="middle-block"></span>
 
     <section class="about">
       <div class="about__container container">
@@ -146,7 +144,6 @@
         </div>
       </div>
     </section>
-    <span class="middle-block"></span>
 
     <section class="advantages">
       <div class="advantages__container container">
@@ -284,6 +281,9 @@
     <section class="contacts">
       <div class="contacts__container container">
         <div class="contacts__wrapper">
+          <span class="contacts__element">
+            <img src="./images/contacts-big.png" alt="">
+          </span>
           <div class="contacts__title-wrapper">
             <h2 class="contacts__title">
               Свяжитесь
@@ -326,17 +326,25 @@
             <div class="contacts__content-wrapper">
               <form class="contacts__form-employer contacts-employer">
                 <ul class="contacts-employer__wrapper">
-                  <li class="contacts-employer__inputs-wrapper" id="name">
-                    <input class="contacts-employer__input" type="text" placeholder="Ваш имя">
+                  <li class="contacts-employer__inputs-wrapper">
+                    <input class="contacts-employer__input" id="name" type="text" placeholder="Ваш имя">
+                    <span class="contacts-employer__error" id="nameSpan">обязательно должны быть заполнены</span>
                   </li>
-                  <li class="contacts-employer__inputs-wrapper" id="post">
-                    <input class="contacts-employer__input" type="text" placeholder="Какую должность вам нужно закрыть">
+                  <li class="contacts-employer__inputs-wrapper">
+                    <input class="contacts-employer__input" id="post" type="text"
+                      placeholder="Какую должность вам нужно закрыть">
+                    <span class="contacts-employer__error" id="postSpan">обязательно должны быть заполнены</span>
                   </li>
-                  <li class="contacts-employer__inputs-wrapper" id="get-in-touch">
-                    <input class="contacts-employer__input" type="text" placeholder="Как с вами можно связаться">
+                  <li class="contacts-employer__inputs-wrapper">
+                    <input class="contacts-employer__input" id="get-in-touch" type="text"
+                      placeholder="Как с вами можно связаться">
+                    <span class="contacts-employer__error" id="get-in-touchSpan">обязательно должны быть
+                      заполнены</span>
                   </li>
-                  <li class="contacts-employer__inputs-wrapper" id="resume">
-                    <input class="contacts-employer__input" type="text" placeholder="Ссылку на резюме (гугл док)">
+                  <li class="contacts-employer__inputs-wrapper">
+                    <input class="contacts-employer__input" id="resume" type="text"
+                      placeholder="Ссылку на резюме (гугл док)">
+                    <span class="contacts-employer__error" id="resumeSpan">обязательно должны быть заполнены</span>
                   </li>
                 </ul>
                 <button class="contacts-employer__btn" type="submit">отправить заявку</button>
@@ -346,6 +354,66 @@
             </div>
 
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process">
+      <div class="process__container container">
+        <div class="process__wrapper">
+
+          <div class="process__title-wrapper">
+            <h2 class="process__title">
+              Зарабатывай
+              <span>
+                на поиске талантов
+              </span>
+            </h2>
+            <p class="process__subtitle">
+              Закрывай заявки - получай выплату за результат
+            </p>
+          </div>
+
+          <h3 class="process__heading">
+            <span>Pink</span> Hunter
+          </h3>
+          <p class="process__text">
+            Это современное рекрутинговое агентство в сфере affiliate marketing & IT, которое дает возможность работать
+            в
+            удовольствие.С нами вы получаете возможность быть независимым, работать с любой точки мира и нет разницы вы
+            профессионал
+            или новичок без опыта, который хочет попробовать себя в роли рекрутера. 
+          </p>
+
+          <ul class="process__list">
+            <li class="process__items">
+              <span class="process__circle"></span>
+              <p class="process__items-text">
+                Доступ к самым разнообразным вакансиям
+                <span>
+                  affiliate marketing & IT 
+                </span>
+              </p>
+            </li>
+            <li class="process__items">
+              <span class="process__circle"></span>
+              <p class="process__items-text">
+                Оплату с каждого кандидата, который будет трудоустроен
+                <span>
+                  от 300$ до
+                </span>
+              </p>
+            </li>
+            <li class="process__items">
+              <span class="process__circle"></span>
+              <p class="process__items-text">
+                Консультирование и персоналное сопровождения
+                <span>
+                  нашими тимлидами
+                </span>
+              </p>
+            </li>
+          </ul>
 
         </div>
       </div>
