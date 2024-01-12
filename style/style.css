@@ -750,6 +750,36 @@ body {
   text-align: right;
   margin: 0 auto;
 }
+.process__heading {
+  margin-bottom: 20px;
+  font-size: 72px;
+  line-height: 1.3em;
+  text-transform: uppercase;
+}
+.process__heading span {
+  color: #DB00F9;
+}
+.process__text {
+  margin-bottom: 150px;
+}
+.process__list {
+  gap: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.process__items {
+  width: 100%;
+  gap: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.process__circle {
+  display: inline-block;
+  width: 70px;
+  height: 40px;
+  border: 1px solid var(--white-color);
+  border-radius: 100%;
+}
 
 @media (max-width: 1500px) {
   .def-btn {

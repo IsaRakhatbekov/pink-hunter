@@ -108,58 +108,6 @@ if (contactsBtn) {
       // contactsName.classList.add("error")
       contactsNameSpan.classList.add("error")
     }
-    
-
-    if (contactsPost.value && contactsName.value.trim()) { 
-      // contactsName.classList.remove("error")
-      contactsPostSpan.classList.remove("error")
-    } else {
-      // contactsName.classList.add("error")
-      contactsPostSpan.classList.add("error")
-    }
-
-    if (getInTouch.value && contactsName.value.trim()) { 
-      // contactsName.classList.remove("error")
-      getInTouchSpan.classList.remove("error")
-    } else {
-      // contactsName.classList.add("error")
-      getInTouchSpan.classList.add("error")
-    }
-
-    if (contactsResume.value && contactsName.value.trim()) { 
-      // contactsName.classList.remove("error")
-      contactsResumeSpan.classList.remove("error")
-    } else {
-      // contactsName.classList.add("error")
-      contactsResumeSpan.classList.add("error")
-    }
 
   })
 }
-
-
-
-
-
-// function Animal(name, vid) {
-//   this.name = name;
-//   this.vid = vid;
-//   this.hello = function(name) {
-//     console.log(`Hello, I,m ${this.name}`)
-//   }
-// }
-
-// const greating = (animal) => {
-//    console.log(`Hello, I,m ${animal.name}`)
-// }
-
-// let cat0 = new Animal('Murka', 'Cat');
-
-// const cat1 = {
-//   name: 'Murka',
-//   vid: 'Cat'
-// }
-
-// cat0.hello()
-
-// greating(cat1)

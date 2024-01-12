@@ -834,6 +834,42 @@ body {
     text-align: right;
     margin: 0 auto;
   }
+
+  &__heading {
+    margin-bottom: 20px;
+    font-size: 72px;
+    line-height: 1.3em;
+    text-transform: uppercase;
+
+    & span {
+      color: #DB00F9;
+    }
+  }
+
+  &__text {
+    margin-bottom: 150px;
+  }
+
+  &__list {
+    gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  &__items {
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__circle {
+    display: inline-block;
+    width: 70px;
+    height: 40px;
+    border: 1px solid var(--white-color);
+    border-radius: 100%;
+  }
 }
 
 // PROCESS -- ends 
