@@ -864,15 +864,94 @@ body {
   }
 
   &__circle {
+    position: relative;
     display: inline-block;
     width: 70px;
     height: 40px;
     border: 1px solid var(--white-color);
     border-radius: 100%;
+
+    & span {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: var(--pink-color);
+      border-radius: 100%;
+    }
+  }
+
+  &__circle--first {
+    top: -4px;
+    right: -4px;
+  }
+
+  &__circle--second {
+    left: -2px;
+    bottom: -4px;
+  }
+
+  &__circle--third {
+    top: -4px;
+    left: -2px;
+  }
+
+  &__items-text {
+    & span {
+      font-weight: 600;
+    }
   }
 }
 
 // PROCESS -- ends 
+
+// FOOTER
+.footer {
+  background-color: #121212;
+  padding: 100px 0;
+
+  &__list {
+    gap: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  }
+
+  &__items {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__little-titles {
+    color: #5A5A5A;
+  }
+
+  &__title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: calc(60px + 42 * (100vw / 1900));
+    line-height: 1.3em;
+  }
+
+  &__text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+// FOOTER -- ends
 
 @media (max-width: 1500px) {
   .def-btn {
@@ -1098,6 +1177,12 @@ body {
         grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
         margin-bottom: 35px;
       }
+    }
+  }
+
+  .footer {
+    &__title {
+      font-size: calc(50px + (8 + 8 * 0.7) * ((10vw - 320px) / 1300));
     }
   }
 }
